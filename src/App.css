@@ -1,0 +1,140 @@
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(-45deg, #6a11cb, #2575fc, #4ca1af, #67b26f, #c6e377);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite, fadeIn 1.5s ease-in-out;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+form {
+  background-color: rgba(255, 255, 255, 0.8); /* Form background color with opacity */
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+  display: flex;
+  flex-direction: column; /* Organize form elements into column layouts */
+  align-items: center; /* Center the form element */
+  animation: slideUp 0.5s ease-out;
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.input-field {
+  margin-bottom: 15px; /* Reduce the distance between input fields */
+  width: 100%;
+  max-width: 300px; /* Maximum input field width */
+  display: flex;
+  flex-direction: column; /* Organize input field elements into a column layout */
+}
+
+label {
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.error {
+  color: red;
+  margin-top: 5px;
+  font-size: 12px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-self: center; /* Mengatur agar tombol submit berada di tengah */
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px #007bff;
+  transition: box-shadow 0.3s ease;
+}
+
+.result-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  animation: slideUp 0.5s ease-out;
+}
+
+.result-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.form-data {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  row-gap: 10px;
+  column-gap: 10px;
+}
+
+.form-item {
+  display: contents;
+}
+
+.label {
+  font-weight: bold;
+  color: #333;
+  text-align: left;
+}
+
+.value {
+  color: #555;
+}
